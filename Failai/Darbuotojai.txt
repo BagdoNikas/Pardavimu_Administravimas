@@ -1,0 +1,6 @@
+TN001; Ponas Toks ir Toks
+TN002; Ponas Bynas
+TN003; Nërë Vaðiukas
+TN004; Fedia Fiodoroviè
+TN005; Kancleris Sruoga
+TN006; Lifto Ðkëma

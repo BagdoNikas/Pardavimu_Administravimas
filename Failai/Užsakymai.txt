@@ -1,0 +1,12 @@
+U_0001;Tadas Blinda;200;Ponas Toks ir Toks;2017-02-15
+U_0002;Kazys Binkis;200;Ponas Bynas;2017-02-16
+U_0003;UAB Paslapèiø Biuras;25;Nërë Vaðiukas;2017-02-17
+U_0004;UAB GhostBusters;120;Fedia Fiodoroviè;2017-02-18
+U_0005;Tadas Blinda;188;Ponas Bynas;2017-02-19
+U_0006;Sad Boi Ye;10000;Ponas Toks ir Toks;2017-02-20
+U_0007;Shao Ling;1000;Nërë Vaðiukas;2017-02-21
+U_0008;John Doe;8019,8;Nërë Vaðiukas;2017-02-22
+U_0009;Paolo Choelo;23999,4;Ponas Bynas;2017-02-23
+U_0010;UAB Mother Ship;5000;Kancleris Sruoga;2017-02-24
+U_0011;AB Kriautuvë;988,5;Lifto Ðkëma;2017-02-25
+U_0012;Kriaukliø Valas;98,85;Lifto Ðkëma;2017-02-26
