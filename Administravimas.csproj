@@ -64,11 +64,17 @@
     <Compile Include="Klasės\Detalizacija.cs" />
     <Compile Include="Klasės\Temps.cs" />
     <Compile Include="Klasės\Užsakymas.cs" />
+    <Compile Include="WPF Windows\Pridėti_Prekę.xaml.cs">
+      <DependentUpon>Pridėti_Prekę.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WPF Windows\Prideti_Darbuotoja.xaml.cs">
       <DependentUpon>Prideti_Darbuotoja.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF Windows\Prideti_Klienta.xaml.cs">
       <DependentUpon>Prideti_Klienta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF Windows\Salinimas.xaml.cs">
+      <DependentUpon>Salinimas.xaml</DependentUpon>
     </Compile>
     <Page Include="WPF Windows\Formuoti_Ataskaita.xaml">
       <SubType>Designer</SubType>
@@ -96,11 +102,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WPF Windows\Pridėti_Prekę.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WPF Windows\Prideti_Darbuotoja.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF Windows\Prideti_Klienta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF Windows\Salinimas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

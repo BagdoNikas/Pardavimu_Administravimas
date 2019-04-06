@@ -31,6 +31,7 @@ namespace Administravimas
         public static string id_klientoF;
         public static string id_darbuotojo;
         public static string id_uzsakymo;
+        public static string id_prekes;
 
         /// <summary>
         /// Duomenų nuskaitymo iš failų metodas
@@ -87,10 +88,10 @@ namespace Administravimas
                 while ((line = reader.ReadLine()) != null)
                 {
                     string[] part = line.Split(';');
-                    string id = part[0];
+                    id_prekes = part[0];
                     string pav = part[1];
                     double kain = double.Parse(part[2]);
-                    Prekė dummy = new Prekė(id, pav, kain);
+                    Prekė dummy = new Prekė(id_prekes, pav, kain);
                     Prekės.Add(dummy);
                 }
             }
@@ -141,33 +142,22 @@ namespace Administravimas
         /// <param name="darbuotojas">pardavėjo vardas ir pavardė</param>
         /// <param name="data">užsakymo pateikimo data</param>
         /// <param name="pidkiekis">užsakytų prekių id ir kiekiai</param>
-        public static void Naujas_Užsakymas(string id, string klientas, double suma, string darbuotojas, DateTime data, string pidkiekis)
+        public static void Naujas_Užsakymas(string id, string klientas, double suma, string darbuotojas, DateTime data, string[] pid ,short[] kiekis)
         {
             //List'ų papildymas
             Užsakymas užs = new Užsakymas(id, klientas, suma, darbuotojas, data);
-            string[] eil = pidkiekis.Split('\n');
-            string[] pid = new string[eil.Length];
-            short[] kiekis = new short[eil.Length];
-            for (int i = 0; i < eil.Length; i += 2)
-            {
-                string[] parts = eil[i].Split(' ');
-                pid[i] = parts[0];
-                kiekis[i] = short.Parse(parts[1].Trim('\r'));
-            }
             Detalizacija det = new Detalizacija(id, pid, kiekis);
             Užsakymai.Add(užs);
             Detalės.Add(det);
-            // ^ ---> Nepyk, kad pakeičiau, taip man kiek logiškiau atrodo, aišku, jei netinka, visada galim pakeist
 
 
-            //UŽKOMENTINAU NES TESTAVAU IVEDIMAS IS LANGO CIA MODIFIKUOT REIK
             //Text failo papildymas
-            using (var fr = File.AppendText(UžDataFile))
+            using (var fr = new StreamWriter(File.Open(UžDataFile, FileMode.Append), Encoding.GetEncoding(1257)))
             {
                 fr.WriteLine(užs.ToString());
             }
 
-            using (var fr = File.AppendText(DeDataFile))
+            using (var fr = new StreamWriter(File.Open(DeDataFile, FileMode.Append), Encoding.GetEncoding(1257)))
             {
                 fr.WriteLine(det.ToString());
             }
@@ -180,12 +170,17 @@ namespace Administravimas
             Klientai.Add(klientas);
 
             //Text failo papildymas
-            using (var fr = File.AppendText(KlDataFile))
+            using (var fr = new StreamWriter(File.Open(KlDataFile, FileMode.Append), Encoding.GetEncoding(1257)))
             {
                 fr.WriteLine(klientas.ToString());
             }
         }
 
+        /// <summary>
+        /// Naujas Darbuotojas
+        /// </summary>
+        /// <param name="tabelis"></param>
+        /// <param name="varpav"></param>
         public static void Naujas_Darbuotojas(string tabelis, string varpav)
         {
             //List'o papildymas
@@ -193,10 +188,24 @@ namespace Administravimas
             Pardavėjai.Add(pardavėjas);
 
             //Text failo papildymas
-            using (var fr = File.AppendText(DaDataFile))
+            using (var fr = new StreamWriter(File.Open(DaDataFile, FileMode.Append), Encoding.GetEncoding(1257)))
             {
                 fr.WriteLine(pardavėjas.ToString());
             }
         }
+
+        public static void Nauja_Prek(string tabelis, string pav, double kaina)
+        {
+            //List'o papildymas
+            Prekė prekė= new Prekė(tabelis, pav, kaina);
+            Prekės.Add(prekė);
+
+            //Text failo papildymas
+            using (var fr = new StreamWriter(File.Open(PDataFile, FileMode.Append), Encoding.GetEncoding(1257)))
+            {
+                fr.WriteLine(prekė.ToString());
+            }
+        }
+
     }
 }

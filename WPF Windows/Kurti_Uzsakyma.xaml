@@ -23,6 +23,11 @@
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="Pink"/>
+        </Style>
     </Window.Resources>
     <Border Padding="10">
         <Grid>
@@ -39,30 +44,30 @@
                 <Grid Margin="0,0,216,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="225"/>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="225"/>
-                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="250"/>
+                        <!--<ColumnDefinition Width="100"/>-->
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="150"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
                         <Label Content="ID" Margin="37,10,10,0" />
-                        <TextBox TextChanged="EnableButton" Name="ID_text" Height="25" Margin="5 10 5 10"/>
+                        <TextBox IsReadOnly="True" TextChanged="EnableButton" Name="ID_text" Height="25" Margin="5 10 5 10"/>
                     </StackPanel>
                     <StackPanel Grid.Column="1">
                         <Label Content="Klientas" Margin="86,10,58,0" />
-                        <TextBox TextChanged="EnableButton" Name="Klientas_text" Height="25"  Margin="5 10 5 10"/>
+                        <ComboBox SelectionChanged="text_SelectionChanged" IsReadOnly="True" Name="Klientas_text" Height="25"  Margin="5 10 5 10"/>
                     </StackPanel>
-                    <StackPanel Grid.Column="2">
+                    <!--<StackPanel Grid.Column="2">
                         <Label Content="Suma" Margin="29,10,10,0" />
                         <TextBox TextChanged="EnableButton" Name="Suma_text" Height="25" Margin="5 10 5 10"/>
-                    </StackPanel>
-                    <StackPanel  Grid.Column="3">
+                    </StackPanel>-->
+                    <StackPanel  Grid.Column="2">
                         <Label Content="Pardavėjas" Margin="69,10,58,0" />
-                        <TextBox TextChanged="EnableButton" Name="Pardavejas_text" Height="25" Margin="5 10 5 10"/>
+                        <ComboBox  SelectionChanged="text_SelectionChanged" IsReadOnly="True" Name="Pardavejas_text" Height="25" Margin="5 10 5 10"/>
                     </StackPanel>
-                    <StackPanel Grid.Column="4">
+                    <StackPanel Grid.Column="3">
                         <Label Content="Data" Margin="24,10,10,0"/>
-                        <TextBox TextChanged="EnableButton" Name="Data_text" Height="25" Margin="5 10 5 10" Text="{Binding Source={x:Static sys:DateTime.Now},  StringFormat='yyyy-MM-dd HH:mm:ss ',Mode=OneWay}"/>
+                        <TextBox TextChanged="EnableButton" Name="Data_text" Height="25" Margin="5 10 5 10" Text="{Binding Source={x:Static sys:DateTime.Now},  StringFormat='yyyy-MM-dd HH:mm ',Mode=OneWay}"/>
                     </StackPanel>
                 </Grid>
 

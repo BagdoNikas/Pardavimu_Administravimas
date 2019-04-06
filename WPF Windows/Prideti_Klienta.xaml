@@ -40,7 +40,7 @@
             </StackPanel>
             <StackPanel Grid.Column="1">
                 <Label Content="Identifikatorius" Margin="20,10,20,0" />
-                <TextBox TextChanged="EnableButton" Name="Id_text" Height="25" Margin="10 10 10 10"/>
+                <TextBox IsReadOnly="True" TextChanged="EnableButton" Name="Id_text" Height="25" Margin="10 10 10 10"/>
             </StackPanel>
             <StackPanel Grid.Column="2">
                 <Label Content="Pavadinimas" Width="95" Margin="10 10 10 0" />

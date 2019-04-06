@@ -23,20 +23,28 @@ namespace Administravimas.WPF_Windows
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow main = null;
+
         public MainWindow()
         {
+            main = this;
             InitializeComponent();
             Metodai.Skaitymas();
-
+            Update_Data_Grid();
         }
-        public void FillDataGrid()
+
+        public void Update_Data_Grid()
         {
-            var col = new DataGridTextColumn();
-            col.Header = "D";
-            col.Binding = new Binding("A");
-            DuomenuGrid.Columns.Add(col);
+            for (int i = 0; i < Metodai.Užsakymai.Count; i++)
+            {
+                DuomenuGrid.Items.Clear();
+            }
+            for (int i = 0; i < Metodai.Užsakymai.Count; i++)
+            {
+                var užsakymas = Metodai.Užsakymai[i];
+                DuomenuGrid.Items.Add(užsakymas);
+            }
         }
-
         /// <summary>
         /// 
         /// </summary>
@@ -83,9 +91,16 @@ namespace Administravimas.WPF_Windows
             PridetiKlientaWindow.Show();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Pasalinti_Click(object sender, RoutedEventArgs e)
         {
-            this.FillDataGrid();
+            var PasalintiWindow = new Salinimas();
+            PasalintiWindow.Show();
+        }
+
+        private void PridetiPreke_Click(object sender, RoutedEventArgs e)
+        {
+            var PridetiprekeWindow = new Prideti_preke();
+            PridetiprekeWindow.Show();
         }
     }
 }

@@ -6,9 +6,8 @@
         xmlns:local="clr-namespace:Administravimas"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Administravimas" Height="500" Width="1000" 
-        ResizeMode="CanMinimize"   Background="LightGray"
-        Loaded="Window_Loaded">
+        Title="Administravimas" Height="500" Width="900" 
+        ResizeMode="CanMinimize"   Background="LightGray">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="Lavender"/>
@@ -22,15 +21,15 @@
     <Border Padding="10">
 
         <!-- Programos laukas dalinamas į dvi dalis ir dedami elementai -->
-        <Grid>
+        <Grid >
 
             <!-- Programos laukas padalinamas į dvi lygias dalis-->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="800"/>
+                <ColumnDefinition Width="700"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <DataGrid Name="DuomenuGrid" AutoGenerateColumns="False" Height="451" Width ="800">
+            <DataGrid  Name="DuomenuGrid" AutoGenerateColumns="False" Height="451" Width ="701">
                 
                     <!--<DataTemplate>
                     <Expander Header="{Binding Prekes}">
@@ -38,12 +37,11 @@
                         </Expander>
                     </DataTemplate>-->
                 <DataGrid.Columns >
-                    <DataGridTextColumn x:Name="ID" FontWeight="Bold" Header="ID" Binding="{Binding Path=A}" MinWidth="50"/>
-                    <DataGridTextColumn x:Name="Klientas" FontWeight="Bold" Header="Klientas" Binding="{Binding Path=B}" MinWidth="175"/>
-                    <DataGridTextColumn x:Name="Suma" FontWeight="Bold" Header="Suma" Binding="{Binding Path=C}" MinWidth="100"/>
-                    <DataGridTextColumn x:Name="Pardavėjas" FontWeight="Bold" Header="Pardavėjas" Binding="{Binding Path=D}" MinWidth="175"/>
-                    <DataGridTextColumn x:Name="Data" FontWeight="Bold" Header="Data" Binding="{Binding Path=E}" MinWidth="100"/>
-                    <DataGridTextColumn x:Name="Prekes" FontWeight="Bold" Header="Prekes" Binding="{Binding Path=F}" MinWidth="200"/>
+                    <DataGridTextColumn x:Name="ID" FontWeight="Bold" Header="ID" Binding="{Binding Path=ID}" MinWidth="50"/>
+                    <DataGridTextColumn x:Name="Klientas" FontWeight="Bold" Header="Klientas" Binding="{Binding Path=Pirkėjas}" MinWidth="200"/>
+                    <DataGridTextColumn x:Name="Suma" FontWeight="Bold" Header="Suma" Binding="{Binding Path=Suma}" MinWidth="102"/>
+                    <DataGridTextColumn x:Name="Pardavėjas" FontWeight="Bold" Header="Pardavėjas" Binding="{Binding Path=Darbuotojas}" MinWidth="200"/>
+                    <DataGridTextColumn x:Name="Data" FontWeight="Bold" Header="Data" Binding="{Binding Path=Data}" MinWidth="120"/>
                 </DataGrid.Columns>
                 <DataGrid.ColumnHeaderStyle>
                     <Style TargetType="{x:Type DataGridColumnHeader}">
@@ -55,12 +53,14 @@
             <!-- Dešinioji programos lauko dalis užpildoma elementais-->
             <StackPanel Grid.Column="1">
 
-                <Button Height="25"  Margin="10 10 10 10 " Click="Kurti_Užsakymą_Click">Naujas užsakymas</Button>
-                <Image Height="170" Margin="10 20 10 0" Opacity="0.2" Source="/Paveiksliukai/Logo.png"/>
+                <Button Height="25" Margin="10 5 10 10 " Click="Kurti_Užsakymą_Click">Naujas užsakymas</Button>
+                <Image Height="130" Margin="10 0 10 0" Opacity="0.2" Source="/Paveiksliukai/Logo.png"/>
                 <Button Height="25" Margin="10 20 10 10 " Click="PridetiPardaveja_Click" >Pridėti pardavėją</Button>
                 <Button Height="25" Margin="10 10 10 10 " Click="PridetiKlienta_Click" >Pridėti klientą</Button>
+                <Button Height="25" Margin="10 10 10 10 " Click="PridetiPreke_Click" >Pridėti Prekę</Button>
                 <Button Height="25" Margin="10 10 10 10 " Click="Formuoti_Click">Formuoti ataskaitą</Button>
-                <Button Height="25" Margin="10 30 10 10 " Click="Baigti_Click">Baigti</Button>
+                <Button Height="25" Margin="10 10 10 10 " Click="Pasalinti_Click">Pašalinti</Button>
+                <Button Height="25" Margin="10 10 10 10 " Click="Baigti_Click">Baigti</Button>
             </StackPanel>
         </Grid>
     </Border>
