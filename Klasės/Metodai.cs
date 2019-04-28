@@ -12,6 +12,7 @@ namespace Administravimas
     /// </summary>
     public class Metodai
     {
+        #region Kintamieji ir Listai
         //-----------------Duomenų saugojimo sąrašai------------------------
         public static List<Užsakymas> Užsakymai = new List<Užsakymas>();
         public static List<Detalizacija> Detalės = new List<Detalizacija>();
@@ -26,18 +27,21 @@ namespace Administravimas
         const string DaDataFile = "..\\..\\Failai\\Darbuotojai.txt";
         const string KlDataFile = "..\\..\\Failai\\Klientai.txt";
 
+        public static string[] failai = { UžDataFile, DeDataFile, PDataFile, DaDataFile, KlDataFile };
         //-----------------Generuojamų ID kintamieji------------------------
         public static string id_klientoJ;
         public static string id_klientoF;
         public static string id_darbuotojo;
         public static string id_uzsakymo;
         public static string id_prekes;
+        public static int prekiuskaicius = 0;
+        #endregion
 
         /// <summary>
         /// Duomenų nuskaitymo iš failų metodas
         /// </summary>
         public static void Skaitymas()
-        {
+        {            
             //-------------------------Užsakymai----------------------------
             using (StreamReader reader = new StreamReader(UžDataFile, Encoding.GetEncoding(1257)))
             {
@@ -59,13 +63,14 @@ namespace Administravimas
             using (StreamReader reader = new StreamReader(DeDataFile, Encoding.GetEncoding(1257)))
             {
                 string line;
-                List<string> pid = new List<string>();
-                List<short> kiekiai = new List<short>();
+
                 while ((line = reader.ReadLine()) != null)
                 {
                     string[] part = line.Split(';');
                     string uid = part[0];
                     int i = 1;
+                List<string> pid = new List<string>();
+                List<short> kiekiai = new List<short>();
                     while (part[i] != "")
                     {
                         string pidnkiekis = part[i];
@@ -75,6 +80,7 @@ namespace Administravimas
                         pid.Add(id);
                         kiekiai.Add(kiekis);
                         i++;
+                        prekiuskaicius++;
                     }
                     Detalizacija dummy = new Detalizacija(uid, pid.ToArray(), kiekiai.ToArray());
                     Detalės.Add(dummy);
@@ -142,7 +148,7 @@ namespace Administravimas
         /// <param name="darbuotojas">pardavėjo vardas ir pavardė</param>
         /// <param name="data">užsakymo pateikimo data</param>
         /// <param name="pidkiekis">užsakytų prekių id ir kiekiai</param>
-        public static void Naujas_Užsakymas(string id, string klientas, double suma, string darbuotojas, DateTime data, string[] pid ,short[] kiekis)
+        public static void Naujas_Užsakymas(string id, string klientas, double suma, string darbuotojas, DateTime data, string[] pid, short[] kiekis)
         {
             //List'ų papildymas
             Užsakymas užs = new Užsakymas(id, klientas, suma, darbuotojas, data);
@@ -163,6 +169,14 @@ namespace Administravimas
             }
         }
 
+        /// <summary>
+        /// Sukuria nauja kliento elementa
+        /// </summary>
+        /// <param name="id">kliento id</param>
+        /// <param name="tipas">kliento tipas (fizinis, juridinis)</param>
+        /// <param name="pavadinimas">Kliento pavadinimas / vardas pavarde</param>
+        /// <param name="kodas">kliento kodas</param>
+        /// <param name="telNr">kliento telefoo numeris</param>
         public static void Naujas_Klientas(string id, string tipas, string pavadinimas, long kodas, long telNr)
         {
             //List'o papildymas
@@ -194,10 +208,16 @@ namespace Administravimas
             }
         }
 
+        /// <summary>
+        /// Sukuria nauja preke
+        /// </summary>
+        /// <param name="tabelis">prekes id</param>
+        /// <param name="pav">prekes pavadinimas</param>
+        /// <param name="kaina">prekes kaina</param>
         public static void Nauja_Prek(string tabelis, string pav, double kaina)
         {
             //List'o papildymas
-            Prekė prekė= new Prekė(tabelis, pav, kaina);
+            Prekė prekė = new Prekė(tabelis, pav, kaina);
             Prekės.Add(prekė);
 
             //Text failo papildymas
@@ -206,6 +226,20 @@ namespace Administravimas
                 fr.WriteLine(prekė.ToString());
             }
         }
+        
+        /// <summary>
+        /// Iraso nauja elute i faila
+        /// </summary>
+        /// <param name="elementas">elementas kuri irasys i faila</param>
+        /// <param name="nr">failo numeris failu masyve</param>
+        public static void Salinimas(Object elementas, int nr)
+        {            
+            using (var fr = new StreamWriter(File.Open(failai[nr], FileMode.Append), Encoding.GetEncoding(1257)))
+            {
+                fr.WriteLine(elementas.ToString());
+            }
+        }
 
     }
 }
+

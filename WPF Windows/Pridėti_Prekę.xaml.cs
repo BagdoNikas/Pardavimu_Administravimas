@@ -5,12 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Administravimas.WPF_Windows
 {
@@ -37,6 +31,11 @@ namespace Administravimas.WPF_Windows
             pid.Text = id;
         }
 
+        /// <summary>
+        /// Įjungia mygtuką pridęti kai visi laukai užpyldomi
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EnableButton(object sender, TextChangedEventArgs e)
         {
             if (pid.IsLoaded)
@@ -48,12 +47,29 @@ namespace Administravimas.WPF_Windows
             }
         }
 
+        /// <summary>
+        /// Sukuria naują elementą ir pridedą į listą
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
             Metodai.Nauja_Prek(pid.Text, pavadinimas.Text, double.Parse(kaina.Text));
             this.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Blogai įvesta kaina");
+            }
         }
 
+        /// <summary>
+        /// Uždaro tik šį langą
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

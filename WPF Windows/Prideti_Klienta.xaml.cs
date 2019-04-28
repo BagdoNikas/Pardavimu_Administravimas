@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Administravimas.WPF_Windows
 {
@@ -50,9 +39,16 @@ namespace Administravimas.WPF_Windows
         /// </summary>
         private void Itraukti_Click(object sender, RoutedEventArgs e)
         {
-            Metodai.Naujas_Klientas(Id_text.Text, Tipas_combo.SelectedItem.ToString(),
-                    Pavadinimas_text.Text, long.Parse(Kodas_text.Text), long.Parse(TelNr_text.Text));
-            this.Close();
+            try
+            {
+                Metodai.Naujas_Klientas(Id_text.Text, Tipas_combo.SelectedItem.ToString(),
+                        Pavadinimas_text.Text, long.Parse(Kodas_text.Text), long.Parse(TelNr_text.Text));
+                this.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Blogai įvestas kodas arba telefono numeris");
+            }
         }
 
         /// <summary>

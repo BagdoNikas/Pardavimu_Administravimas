@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Administravimas.WPF_Windows
 {
@@ -29,6 +20,9 @@ namespace Administravimas.WPF_Windows
             Pildyt_ComboBox();
         }
 
+        /// <summary>
+        /// Užpyldo Kliento ir Pardavejo pasirinkimo langus
+        /// </summary>
         private void Pildyt_ComboBox()
         {
             for (int i = 0; i < Metodai.Klientai.Count; i++)
@@ -44,13 +38,19 @@ namespace Administravimas.WPF_Windows
             }
         }
 
+        /// <summary>
+        /// Sukuria naują užsakyma pagal pasirinkimus
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Kurti_Click(object sender, RoutedEventArgs e)
         {
             string pidkiekis = new TextRange(Id_Kiekis_RichText.Document.ContentStart, Id_Kiekis_RichText.Document.ContentEnd).Text;
             pidkiekis = pidkiekis.Remove(pidkiekis.Length - 2);
 
             double suma = 0;
-
+            try
+            {
             string[] eil = pidkiekis.Split('\n');
             string[] pid = new string[eil.Length];
             short[] kiekis = new short[eil.Length];
@@ -68,6 +68,11 @@ namespace Administravimas.WPF_Windows
             MainWindow.main.Update_Data_Grid();
 
             this.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Blogai ivesti prekių duomenys");
+            }
         }
 
         /// <summary>
@@ -106,6 +111,11 @@ namespace Administravimas.WPF_Windows
             ID_text.Text = id;
         }
 
+        /// <summary>
+        /// Tikrina ar visi laukau užpildyti ir nusprendžia ar įgalinti Kurti mygtuką
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void text_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string richtext = new TextRange(Id_Kiekis_RichText.Document.ContentStart, Id_Kiekis_RichText.Document.ContentEnd).Text;

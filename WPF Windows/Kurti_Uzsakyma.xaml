@@ -45,7 +45,6 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100"/>
                         <ColumnDefinition Width="250"/>
-                        <!--<ColumnDefinition Width="100"/>-->
                         <ColumnDefinition Width="250"/>
                         <ColumnDefinition Width="150"/>
                     </Grid.ColumnDefinitions>
@@ -57,10 +56,6 @@
                         <Label Content="Klientas" Margin="86,10,58,0" />
                         <ComboBox SelectionChanged="text_SelectionChanged" IsReadOnly="True" Name="Klientas_text" Height="25"  Margin="5 10 5 10"/>
                     </StackPanel>
-                    <!--<StackPanel Grid.Column="2">
-                        <Label Content="Suma" Margin="29,10,10,0" />
-                        <TextBox TextChanged="EnableButton" Name="Suma_text" Height="25" Margin="5 10 5 10"/>
-                    </StackPanel>-->
                     <StackPanel  Grid.Column="2">
                         <Label Content="Pardavėjas" Margin="69,10,58,0" />
                         <ComboBox  SelectionChanged="text_SelectionChanged" IsReadOnly="True" Name="Pardavejas_text" Height="25" Margin="5 10 5 10"/>

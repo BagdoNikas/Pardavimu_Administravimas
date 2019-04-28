@@ -1,20 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Microsoft.Win32;
-using System.IO;
-using System.Data;
 
 namespace Administravimas.WPF_Windows
 {
@@ -33,6 +18,9 @@ namespace Administravimas.WPF_Windows
             Update_Data_Grid();
         }
 
+        /// <summary>
+        /// Atnaujina vartotojo matomą duomenų lentelę
+        /// </summary>
         public void Update_Data_Grid()
         {
             for (int i = 0; i < Metodai.Užsakymai.Count; i++)
@@ -45,8 +33,9 @@ namespace Administravimas.WPF_Windows
                 DuomenuGrid.Items.Add(užsakymas);
             }
         }
+
         /// <summary>
-        /// 
+        /// Įjungia langą Kurti užsakymą
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -91,12 +80,22 @@ namespace Administravimas.WPF_Windows
             PridetiKlientaWindow.Show();
         }
 
+        /// <summary>
+        /// Įjungia elementų Šalinimo langą
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Pasalinti_Click(object sender, RoutedEventArgs e)
         {
             var PasalintiWindow = new Salinimas();
             PasalintiWindow.Show();
         }
 
+        /// <summary>
+        /// Įjungia naujos prekės sukūrimo langą
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PridetiPreke_Click(object sender, RoutedEventArgs e)
         {
             var PridetiprekeWindow = new Prideti_preke();

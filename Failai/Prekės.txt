@@ -1,7 +1,7 @@
 P0001;Þnyplës aðaroms rinkti;20
 P0002;Ðnypèiantis vanago nagas;100
 P0003;Karvës kanopos atraiþa;5
-P0004;Þirgo pasagos vinis;23,5
-P0005;Statinë vynui gerti;400,99
-P0006;Ðlepetës po turgø vaikèioti;399,99
-P0007;Auksinis dantis;98,85
+P0004;Pienas;1,3
+P0005;Statinë vynui gerti;40099
+P0006;Ðlepetës po turgø vaikèioti;39999
+P0007;Auksinis dantis;9885

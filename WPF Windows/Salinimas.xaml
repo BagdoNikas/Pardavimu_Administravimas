@@ -35,7 +35,7 @@
         </StackPanel>
         <StackPanel Grid.Column="1">
             <Label Content="Pavadinimas" Width="100" Margin="10 10 10 0" />
-            <ComboBox  IsEditable="True" IsReadOnly="True" Name="Pavadinimas_combo" SelectedIndex="0" Width="180" Height="25"  Margin="10 10 10 10" FontSize="14"/>
+            <ComboBox  IsEditable="True" IsReadOnly="True" Name="Pavadinimas_combo" Width="180" Height="25"  Margin="10 10 10 10" FontSize="14"/>
         </StackPanel>
         <StackPanel Grid.Column="2">
             <Button IsEnabled="False" Grid.Column="0" Name="Remove" Content="Šalinti" Height="25" Width="100" Margin="0 20 10 10" Click="Remove_Click"/>

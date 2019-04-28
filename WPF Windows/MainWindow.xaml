@@ -30,18 +30,12 @@
             </Grid.ColumnDefinitions>
 
             <DataGrid  Name="DuomenuGrid" AutoGenerateColumns="False" Height="451" Width ="701">
-                
-                    <!--<DataTemplate>
-                    <Expander Header="{Binding Prekes}">
-                        <TextBlock TextWrapping="Wrap" Text="{Binding Prekes}"/>
-                        </Expander>
-                    </DataTemplate>-->
                 <DataGrid.Columns >
                     <DataGridTextColumn x:Name="ID" FontWeight="Bold" Header="ID" Binding="{Binding Path=ID}" MinWidth="50"/>
                     <DataGridTextColumn x:Name="Klientas" FontWeight="Bold" Header="Klientas" Binding="{Binding Path=Pirkėjas}" MinWidth="200"/>
                     <DataGridTextColumn x:Name="Suma" FontWeight="Bold" Header="Suma" Binding="{Binding Path=Suma}" MinWidth="102"/>
                     <DataGridTextColumn x:Name="Pardavėjas" FontWeight="Bold" Header="Pardavėjas" Binding="{Binding Path=Darbuotojas}" MinWidth="200"/>
-                    <DataGridTextColumn x:Name="Data" FontWeight="Bold" Header="Data" Binding="{Binding Path=Data}" MinWidth="120"/>
+                    <DataGridTextColumn x:Name="Data" FontWeight="Bold" Header="Data" Binding="{Binding Path=Data, StringFormat={}{0:yyyy-MM-dd HH:mm}}" MinWidth="141"/>
                 </DataGrid.Columns>
                 <DataGrid.ColumnHeaderStyle>
                     <Style TargetType="{x:Type DataGridColumnHeader}">

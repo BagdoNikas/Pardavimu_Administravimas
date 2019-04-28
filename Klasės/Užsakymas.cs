@@ -52,9 +52,13 @@ namespace Administravimas
                 return -1;
         }
 
+        /// <summary>
+        /// Užklotas metodas sugeneruoti string tipo eilutę iš objekto duomenų
+        /// </summary>
+        /// <returns>suformuota string eilutę</returns>
         public override string ToString()
         {
-            return ID + ";" + Pirkėjas + ";" + Suma.ToString() + ";" + Darbuotojas + ";" + Data.ToShortDateString();
+            return ID + ";" + Pirkėjas + ";" + Suma.ToString() + ";" + Darbuotojas + ";" + Data.ToString();
         }
     }
 }

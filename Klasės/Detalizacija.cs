@@ -11,6 +11,7 @@ namespace Administravimas
         public string ID { get; set; } // Užsakymo id
         public string[] PrekėsID { get; set; } // Prekės id
         public short[] Kiekis { get; set; } // Prekių kiekis
+        public int prekiuskaicius = 0;
 
         /// <summary>
         /// Tuščias konstruktorius
@@ -28,6 +29,7 @@ namespace Administravimas
             this.ID = uid;
             this.PrekėsID = pid;
             this.Kiekis = kiekis;
+            prekiuskaicius = prekiuskaicius + pid.Length;
         }
 
         /// <summary>

@@ -1,12 +1,15 @@
-U_0001;Tadas Blinda;200;Ponas Toks ir Toks;2017-02-15
-U_0002;Kazys Binkis;200;Ponas Bynas;2017-02-16
-U_0003;UAB Paslapèiø Biuras;25;Nërë Vaðiukas;2017-02-17
-U_0004;UAB GhostBusters;120;Fedia Fiodoroviè;2017-02-18
-U_0005;Tadas Blinda;188;Ponas Bynas;2017-02-19
-U_0006;Sad Boi Ye;10000;Ponas Toks ir Toks;2017-02-20
-U_0007;Shao Ling;1000;Nërë Vaðiukas;2017-02-21
-U_0008;John Doe;8019,8;Nërë Vaðiukas;2017-02-22
-U_0009;Paolo Choelo;23999,4;Ponas Bynas;2017-02-23
-U_0010;UAB Mother Ship;5000;Kancleris Sruoga;2017-02-24
-U_0011;AB Kriautuvë;988,5;Lifto Ðkëma;2017-02-25
-U_0012;Kriaukliø Valas;98,85;Lifto Ðkëma;2017-02-26
+U_0001;Tadas Blinda;200;Ponas Toks ir Toks;2019-02-15 13:51:00
+U_0002;Kazys Binkis;200;Ponas Bynas;2019-02-16 16:51:00
+U_0003;UAB Paslapèiø Biuras;25;Nërë Vaðiukas;2019-02-17 12:51:00
+U_0004;UAB GhostBusters;120;Fedia Fiodoroviè;2019-02-18 11:51:00
+U_0005;Tadas Blinda;188;Ponas Bynas;2019-02-19 17:51:00
+U_0006;Sad Boi Ye;10000;Ponas Toks ir Toks;2019-02-20 19:51:00
+U_0007;Shao Ling;1000;Nërë Vaðiukas;2019-02-21 18:51:00
+U_0008;John Doe;80198;Nërë Vaðiukas;2019-02-22 14:51:00
+U_0009;Paolo Choelo;239994;Ponas Bynas;2019-02-23 15:11:00
+U_0010;UAB Mother Ship;5000;Kancleris Sruoga;2019-02-24 16:21:00
+U_0011;AB Kriautuvë;9885;Lifto Ðkëma;2019-02-25 16:51:00
+U_0012;UAB Paslapèiø Biuras;120; Nërë Vaðiukas;2019-04-27 16:41:00
+U_0013;UAB Paslapèiø Biuras;20; Ponas Toks ir Toks;2019-04-27 16:31:00
+U_0014;Kazys Binkis;20; Lifto Ðkëma;2019-04-27 16:51:00
+U_0015;Kazys Binkis;125; Ponas Bynas;2019-04-28 09:27:00

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Administravimas.WPF_Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Formuoti Ataskaitą" Height="150" Width="450"
+        Title="Formuoti Ataskaitą" Height="200" Width="450"
                 ResizeMode="NoResize"   Background="LightGray">
     <Window.Resources>
         <Style TargetType="Button">
@@ -14,6 +14,10 @@
             <Setter Property="BorderThickness" Value="0.5"/>
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="FontStyle" Value="Normal"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Bold"/>
         </Style>
     </Window.Resources>
     <Border Padding="10">
@@ -23,9 +27,12 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
-                <ComboBox Name="Kriterijus_combo" SelectedIndex="0" Width="200" Height="25" IsEditable="False" Margin="0 30 0 0" FontSize="14"/>
+                <Label Content="Ataskaitos formatas" Width="130" Margin="0 5 0 0" />
+                <ComboBox Name="Kriterijus_combo" SelectedIndex="0" Width="200" Height="25" IsEditable="False" Margin="0 0 0 0" FontSize="14"/>
+                <Label Content="Ataskaitos pavadinimas" Width="150" Margin="0 10 0 0" />
+                <TextBox TextChanged="Name_textbox_TextChanged" Name="Name_textbox" Width="200" Height="25" Margin="0 0 0 0" FontSize="14"/>
             </StackPanel>
-            <Button Grid.Column="1" Name="formuoti" Content="Formuoti" Height="35" Margin="10,0,10,50" Click="Formuoti_Click"/>
+            <Button Grid.Column="1" Name="formuoti" Content="Formuoti" Height="35" Margin="10,0,10,50" Click="Formuoti_Click" IsEnabled="False"/>
             <Button Grid.Column="1" Name="cancel" Content="Atšaukti" Height="35" Margin="10,0,10,-50" Click="Cancel_Click"/>
         </Grid>
     </Border>
