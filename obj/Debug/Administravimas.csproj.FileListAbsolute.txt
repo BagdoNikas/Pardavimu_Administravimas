@@ -1,0 +1,85 @@
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\bin\Debug\Administravimas.exe.config
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\bin\Debug\Administravimas.exe
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\bin\Debug\Administravimas.pdb
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\App.g.cs
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas_MarkupCompile.cache
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas_MarkupCompile.lref
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.g.resources
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.Properties.Resources.resources
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.csproj.GenerateResource.cache
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.csproj.CoreCompileInputs.cache
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.exe
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.pdb
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\Administravimas_MarkupCompile.cache
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\Administravimas_MarkupCompile.lref
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\Administravimas.exe
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\Administravimas.pdb
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\bin\Debug\Administravimas.exe.config
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\bin\Debug\Administravimas.exe
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\bin\Debug\Administravimas.pdb
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\Administravimas.g.resources
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\Administravimas.Properties.Resources.resources
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\Administravimas.csproj.GenerateResource.cache
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\Administravimas.csproj.CoreCompileInputs.cache
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\bin\Debug\Administravimas.exe.config
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\bin\Debug\Administravimas.exe
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\bin\Debug\Administravimas.pdb
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\App.g.cs
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas_MarkupCompile.cache
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas_MarkupCompile.lref
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.g.resources
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.Properties.Resources.resources
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.csproj.GenerateResource.cache
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.csproj.CoreCompileInputs.cache
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.exe
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.pdb
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\App.g.cs
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\MainWindow.g.cs
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\MainWindow.baml
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Kurti_Uzsakyma.g.cs
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Kurti_Uzsakyma.baml
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Formuoti_Ataskaita.g.cs
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Formuoti_Ataskaita.baml
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Formuoti_Ataskaita.g.cs
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Kurti_Uzsakyma.g.cs
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\MainWindow.g.cs
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Formuoti_Ataskaita.baml
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Kurti_Uzsakyma.baml
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\MainWindow.baml
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Darbuotoja.g.cs
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Klienta.g.cs
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Darbuotoja.baml
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Klienta.baml
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Darbuotoja.g.cs
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Klienta.g.cs
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Darbuotoja.baml
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Klienta.baml
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.csprojAssemblyReference.cache
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Formuoti_Ataskaita.g.cs
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Kurti_Uzsakyma.g.cs
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\MainWindow.g.cs
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Darbuotoja.g.cs
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Klienta.g.cs
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Formuoti_Ataskaita.baml
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Kurti_Uzsakyma.baml
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\MainWindow.baml
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Darbuotoja.baml
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Klienta.baml
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Pridėti_Prekę.g.cs
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Pridėti_Prekę.baml
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Pridėti_Prekę.g.cs
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Salinimas.g.cs
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Pridėti_Prekę.baml
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\WPF Windows\Salinimas.baml
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\Administravimas.csprojAssemblyReference.cache
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.csprojAssemblyReference.cache
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Salinimas.g.cs
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Salinimas.baml
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Pridėti_Prekę.g.cs
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Salinimas.g.cs
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Pridėti_Prekę.baml
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Salinimas.baml
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\bin\Debug\Xceed.Words.NET.dll
+C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\Administravimas.csproj.CopyComplete
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\bin\Debug\Xceed.Words.NET.dll
+C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.csproj.CopyComplete

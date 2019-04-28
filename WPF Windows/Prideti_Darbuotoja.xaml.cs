@@ -61,5 +61,11 @@ namespace Administravimas.WPF_Windows
             else
                 Itraukti.IsEnabled = false;
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+           MessageBox.Show("1. Įveskite darbuotojo vardą ir pavardę\n" +
+                           "2. Paspauskite mygtuką 'Įtraukti'","Pagalba");
+        }
     }
 }

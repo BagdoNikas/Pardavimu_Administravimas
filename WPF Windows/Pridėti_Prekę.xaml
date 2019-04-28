@@ -22,6 +22,9 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
+        <Style TargetType="Menu">
+            <Setter Property="FontSize" Value="10"/>
+        </Style>
     </Window.Resources>
     <Border Padding="10">
         <Grid>
@@ -56,6 +59,9 @@
                     <Button IsEnabled="False" Grid.Column="0" Name="Add" Content="Įtraukti" Height="25" Width="100" Margin="47,10,47,20" Click="Add_Click" Grid.ColumnSpan="2"/>
                 </Grid>
             </StackPanel>
+            <Menu HorizontalAlignment="Left" Height="15.2" Margin="-10,-10,0,0" VerticalAlignment="Top" Width="48">
+                <MenuItem Header="Pagalba" Width="48" Click="MenuItem_Click"/>
+            </Menu>
         </Grid>
     </Border>
 </Window>

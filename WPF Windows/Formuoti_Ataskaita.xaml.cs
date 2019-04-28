@@ -192,5 +192,12 @@ namespace Administravimas.WPF_Windows
                     formuoti.IsEnabled = false;
             }
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("1. Pasirinkite ataskaitos formatą (pdf ar docx(Word dokumentas))\n" +
+                                           "2. Įveskite ataskaitos pavadinimą. \n" +
+                                           "3. Pasirinkite vietą į kurią norite išaugoti ataskaitos dokumentą", "Pagalba");
+        }
     }
 }

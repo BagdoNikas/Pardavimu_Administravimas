@@ -217,5 +217,14 @@ namespace Administravimas.WPF_Windows
         {
             this.Close();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("1. Pasirinkite kategoriją\n" +
+                            "2. Pasirinkite objektą kurį norite pašalinti\n" +
+                            "3. Paspauskite mygtuką 'Šalinti\n\n" +
+                            "Perspėjimas!!! Jeigu objektas susietas su kuriuo\n" +
+                            "nors kitu, jo nebus galima ištrynti.","Pagalba");
+        }
     }
 }

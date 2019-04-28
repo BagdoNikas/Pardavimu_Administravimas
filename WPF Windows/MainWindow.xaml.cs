@@ -101,5 +101,23 @@ namespace Administravimas.WPF_Windows
             var PridetiprekeWindow = new Prideti_preke();
             PridetiprekeWindow.Show();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("1. Paspaudus mygtuką 'Naujas užsakymas' matysite naują langą\n" +
+                            "    kuriame galėsite užpildyti naujo užsakymo duomenis\n" +
+                            "2. Paspaudus mygtuką 'Pridėti pardavėją' matysite naują langą\n" +
+                            "    kuriame galėsite užpildyti naujo pardavėjo duomenis\n" +
+                            "3. Paspaudus mygtuką 'pridėti klientą' matysite naują langą\n" +
+                            "    kuriame galėsite užpildyti naujos prekės duomenis\n" +
+                            "4. Paspaudus mygtuką 'Formuoti ataskaitą' matysite naują langą\n" +
+                            "    kuriame galėsite pasirinkti ataskaitos formatą ir\n" +
+                            "    programa sugeneruos ataskaitą\n" +
+                            "5. Paspaudus mygtuką 'Pašalinti' matysite naują langą\n" +
+                            "    kuriame galėsite pašalinti pasirinktus objektus\n" +
+                            "6. Paspaudus mygtuką 'Baigti' bus uždaryta programa\n\n" +
+                            "    Perspėjimas!!! Paspaudus mygtuką 'Baigti' bus išjungti\n" +
+                            "    visi programos langai.", "Pagalba");
+        }
     }
 }

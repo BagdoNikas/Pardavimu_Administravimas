@@ -92,5 +92,13 @@ namespace Administravimas.WPF_Windows
             else
                 Itraukti.IsEnabled = false;
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("1. Įveskite kliento pavadinimą (Gali būti vardas ir pavardė)\n" +
+                            "2. Įveskite kliento kodą (sveikas skaičius)\n" +
+                            "3. Įveskite kliento telefono numerį (sveikas skaičius)\n" +
+                            "4. Paspauskite mygtuką 'Įtraukti'", "Pagalba");
+        }
     }
 }

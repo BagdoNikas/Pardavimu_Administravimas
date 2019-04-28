@@ -126,5 +126,20 @@ namespace Administravimas.WPF_Windows
                 Kurti.IsEnabled = false;
 
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("1. Pasirinkite Klientą\n" +
+                            "2. Pasirinkite pardavėją\n" +
+                            "3. Galite pakeisti datą, tačiau programa įveda šiandienos datą\n" +
+                            "4. Įveskite prekės ID ir kiekį.\n" +
+                            "    Įvedimo formatas:\n" +
+                            "    4.1. Įveskite prekes ID (sveikas skaičius)\n" +
+                            "    4.2. Padėkite tarpo simbolį ir įveskite prekės kiekį\n" +
+                            "    4.3. Perėjus į kitą eilutę (Pvz. paspaudus Enter mygtuką)\n" +
+                            "        galite įvesti daugiau nei vieną prekę.\n" +
+                            "        Kiekvieną prekė turi būti atskiroje eilutėje.\n" +
+                            "5. Paspauskite mygtuką 'Kurti'.", "Pagalba");
+        }
     }
 }

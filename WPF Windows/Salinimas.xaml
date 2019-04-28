@@ -22,6 +22,9 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
+        <Style TargetType="Menu">
+            <Setter Property="FontSize" Value="10"/>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -41,5 +44,8 @@
             <Button IsEnabled="False" Grid.Column="0" Name="Remove" Content="Šalinti" Height="25" Width="100" Margin="0 20 10 10" Click="Remove_Click"/>
             <Button Grid.Column="0" Name="Cancel" Content="Atšaukti" Height="25" Width="100" Margin="0 0 10 10" Click="Cancel_Click"/>
         </StackPanel>
+        <Menu HorizontalAlignment="Left" Height="15.2" Margin="0,0,0,0" VerticalAlignment="Top" Width="48">
+            <MenuItem Header="Pagalba" Width="48" Click="MenuItem_Click"/>
+        </Menu>
     </Grid>
 </Window>

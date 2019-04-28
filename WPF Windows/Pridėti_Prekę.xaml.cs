@@ -74,5 +74,12 @@ namespace Administravimas.WPF_Windows
         {
             this.Close();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("1. Įveskite prekės pavadimą\n" +
+                            "2. Įveskite prekės kainą\n" +
+                            "3. Paspauskite mygtuką 'Įtraukti'", "Pagalba");
+        }
     }
 }

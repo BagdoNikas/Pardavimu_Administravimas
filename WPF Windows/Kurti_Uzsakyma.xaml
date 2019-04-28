@@ -28,19 +28,27 @@
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Background" Value="Pink"/>
         </Style>
+        <Style TargetType="Menu">
+            <Setter Property="FontSize" Value="10"/>
+        </Style>
     </Window.Resources>
     <Border Padding="10">
         <Grid>
-            <Label Content="Prekės ID ir Kiekis" Width="110" Margin="760 10 10 0" />
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="939*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Prekės ID ir Kiekis" Width="110" Margin="772,10,57,0" Grid.Column="2" />
 
-            <RichTextBox TextChanged="EnableButton" Name="Id_Kiekis_RichText" Height="100" Width="200" Margin="760 -50 5 10">
+            <RichTextBox TextChanged="EnableButton" Name="Id_Kiekis_RichText" Height="100" Width="200" Margin="729,46,10,105" Grid.Column="2">
                 <RichTextBox.Resources>
                     <Style TargetType="{x:Type Paragraph}">
                         <Setter Property="Margin" Value="0"/>
                     </Style>
                 </RichTextBox.Resources>
             </RichTextBox>
-            <StackPanel Name="elementuStack">
+            <StackPanel Name="elementuStack" Grid.ColumnSpan="3">
                 <Grid Margin="0,0,216,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100"/>
@@ -75,6 +83,9 @@
                     <Button IsEnabled="False" Grid.Column="1" Name="Kurti" Content="Kurti" Width="60" Height="25" Margin="400 10 10 10" Click="Kurti_Click"></Button>
                 </Grid>
             </StackPanel>
+            <Menu HorizontalAlignment="Left" Height="15" Margin="-10,-10,0,0" VerticalAlignment="Top" Width="48" Grid.ColumnSpan="3">
+                <MenuItem Header="Pagalba" Width="48" Click="MenuItem_Click"/>
+            </Menu>
         </Grid>
     </Border>
 </Window>
