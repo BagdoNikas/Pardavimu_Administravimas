@@ -9,12 +9,8 @@ namespace Administravimas.WPF_Windows
     /// </summary>
     public partial class Prideti_Darbuotoja : Window
     {
-        string senasid;
+        string oldID;
 
-        /// <summary>
-        /// PAGRINDINIS METODAS ĮGLINANTIS PAGRINDINIAS LANGO SAVYBES
-        /// NEIŠTRYNTI
-        /// </summary>
         public Prideti_Darbuotoja()
         {
             InitializeComponent();
@@ -23,7 +19,7 @@ namespace Administravimas.WPF_Windows
         }
 
         /// <summary>
-        /// Sukuria naują darbuotoją/Pardavėją
+        /// Mygtuko "Pridėti" paspaudimu sukuriamas naujas darbuotojas.
         /// </summary>
         private void Itraukti_Click(object sender, RoutedEventArgs e)
         {
@@ -32,27 +28,28 @@ namespace Administravimas.WPF_Windows
         }
 
         /// <summary>
-        /// Išjungia tik Pridėti_darbuotoja langą
+        /// Išjungia "Naujas darbuotojas" langą.
         /// </summary>
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            Metodai.id_darbuotojo = senasid;
+            Metodai.id_darbuotojo = oldID;
             this.Close();
         }
 
         /// <summary>
-        /// Generuoja naują id kodą pagal pasirinktą tipą ir jau egzistuojančius kodus
+        /// Naujo identifikatoriaus generavimas pagal jau egzistuojančius ID.
         /// </summary>
         public void Generate_ID()
         {
-            senasid = Metodai.id_darbuotojo;
-            string id = "TN" + (int.Parse(senasid.Substring(2)) + 1).ToString("D3");
+            oldID = Metodai.id_darbuotojo;
+            string id = "TN" + (int.Parse(oldID.Substring(2)) + 1).ToString("D3");
             Metodai.id_darbuotojo = id;
             tabelis.Text = id;
         }
 
         /// <summary>
-        /// Jeigu visi textbox yra užpildyti tai itraukti mygtukas įjungiamas, jei neužpildyti tai išjungtas
+        /// Mygtuko "Pridėti" įgalinimas priklausomai nuo formos užpildymo.
+        /// Suveikia kaskart pakeitus Textbox'ų reikšmes.
         /// </summary>
         private void EnableButton(Object sender, TextChangedEventArgs e)
         {
@@ -62,10 +59,15 @@ namespace Administravimas.WPF_Windows
                 Itraukti.IsEnabled = false;
         }
 
+        /// <summary>
+        /// Mygtuko "Pagalba" atliekami veiksmai.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-           MessageBox.Show("1. Įveskite darbuotojo vardą ir pavardę\n" +
-                           "2. Paspauskite mygtuką 'Įtraukti'","Pagalba");
+           MessageBox.Show("1. Įveskite darbuotojo vardą ir pavardę.\n" +
+                           "2. Paspauskite mygtuką 'Įtraukti'.","Pagalba");
         }
     }
 }

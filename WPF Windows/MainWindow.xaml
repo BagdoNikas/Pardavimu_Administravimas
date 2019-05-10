@@ -25,14 +25,17 @@
 
         <!-- Programos laukas dalinamas į dvi dalis ir dedami elementai -->
         <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="238*"/>
+                <RowDefinition Height="213*"/>
+            </Grid.RowDefinitions>
 
             <!-- Programos laukas padalinamas į dvi lygias dalis-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="700"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
-            <DataGrid  Name="DuomenuGrid" AutoGenerateColumns="False" Height="451" Width ="701">
+            <DataGrid  Name="DuomenuGrid" AutoGenerateColumns="False" Height="451" Width ="701" Grid.ColumnSpan="2" Margin="0,0,173,0" Grid.RowSpan="2">
                 <DataGrid.Columns >
                     <DataGridTextColumn x:Name="ID" FontWeight="Bold" Header="ID" Binding="{Binding Path=ID}" MinWidth="50"/>
                     <DataGridTextColumn x:Name="Klientas" FontWeight="Bold" Header="Klientas" Binding="{Binding Path=Pirkėjas}" MinWidth="200"/>
@@ -44,23 +47,24 @@
                     <Style TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="FontWeight" Value="Bold"/>
                     </Style>
-                </DataGrid.ColumnHeaderStyle>                
+                </DataGrid.ColumnHeaderStyle>
             </DataGrid>
 
             <!-- Dešinioji programos lauko dalis užpildoma elementais-->
-            <StackPanel Grid.Column="1">
+            <StackPanel Grid.Column="1" Grid.RowSpan="2">
 
-                <Button Height="25" Margin="10 5 10 10 " Click="Kurti_Užsakymą_Click">Naujas užsakymas</Button>
-                <Image Height="130" Margin="10 0 10 0" Opacity="0.2" Source="/Paveiksliukai/Logo.png"/>
-                <Button Height="25" Margin="10 20 10 10 " Click="PridetiPardaveja_Click" >Pridėti pardavėją</Button>
+                <Image Height="130" Margin="10 0 10 5" Opacity="0.2" Source="/Paveiksliukai/Logo.png"/>
+                <Button Height="25" Margin="10 10 10 10 " Click="Kurti_Užsakymą_Click">Naujas užsakymas</Button>
+                <Button Height="25" Margin="10 10 10 10 " Click="PridetiPardaveja_Click" >Pridėti darbuotoją</Button>
                 <Button Height="25" Margin="10 10 10 10 " Click="PridetiKlienta_Click" >Pridėti klientą</Button>
-                <Button Height="25" Margin="10 10 10 10 " Click="PridetiPreke_Click" >Pridėti Prekę</Button>
+                <Button Height="25" Margin="10 10 10 10 " Click="PridetiPreke_Click" >Pridėti prekę</Button>
                 <Button Height="25" Margin="10 10 10 10 " Click="Formuoti_Click">Formuoti ataskaitą</Button>
                 <Button Height="25" Margin="10 10 10 10 " Click="Pasalinti_Click">Pašalinti</Button>
                 <Button Height="25" Margin="10 10 10 10 " Click="Baigti_Click">Baigti</Button>
             </StackPanel>
-            <Menu HorizontalAlignment="Left" Height="15.2" Margin="-10,-20,0,0" VerticalAlignment="Top" Width="48">
-                <MenuItem Header="Pagalba" Width="48" Click="MenuItem_Click"/>
+            <Menu HorizontalAlignment="Left" Height="15" Margin="-10,-20,0,0" VerticalAlignment="Top" Width="235">
+                <MenuItem Header="Pagalba" Width="48" Click="Pagalba_Click"></MenuItem>
+                <MenuItem Header="Užkrauti duomenis iš atsarginės kopijos" HorizontalAlignment="Left" Width="185" Click="Backup_Click"/>
             </Menu>
         </Grid>
     </Border>

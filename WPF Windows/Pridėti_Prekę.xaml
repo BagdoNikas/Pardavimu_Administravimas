@@ -34,11 +34,11 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
-                <Label Content="Prekės ID " Margin="10 10 10 0"  />
+                <Label Content="ID " Margin="35 10 35 0"  />
                 <TextBox IsReadOnly="True" TextChanged="EnableButton" Name="pid" Height="25" Margin="10 10 10 10"/>
             </StackPanel>
             <StackPanel Grid.Column="1">
-                <Label Content="Prekės pavadinimas " Margin="120 10 120 0" />
+                <Label Content="Pavadinimas " Margin="178 10 178 0" />
                 <TextBox TextChanged="EnableButton" Name="pavadinimas" Height="25" Margin="10 10 10 10"/>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -48,7 +48,7 @@
                 </Grid>
             </StackPanel>
             <StackPanel Grid.Column="2">
-                <Label Content="Prekės kaina " Margin="50 10 50 0" />
+                <Label Content="Kaina " Margin="89 10 89 0" />
                 <TextBox TextChanged="EnableButton" Name="kaina" Height="25" Margin="10 10 10 10"/>
                 <Grid>
                     <Grid.ColumnDefinitions>

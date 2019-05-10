@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Administravimas.WPF_Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Formuoti Ataskaitą" Height="200" Width="450"
-                ResizeMode="NoResize"   Background="LightGray">
+        Title="Ataskaitos formavimas" Height="300" Width="450"
+        ResizeMode="NoResize"   Background="LightGray">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="Lavender"/>
@@ -30,10 +30,14 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
-                <Label Content="Ataskaitos formatas" Width="130" Margin="0 5 0 0" />
-                <ComboBox Name="Kriterijus_combo" SelectedIndex="0" Width="200" Height="25" IsEditable="False" Margin="0 0 0 0" FontSize="14"/>
-                <Label Content="Ataskaitos pavadinimas" Width="150" Margin="0 10 0 0" />
-                <TextBox TextChanged="Name_textbox_TextChanged" Name="Name_textbox" Width="200" Height="25" Margin="0 0 0 0" FontSize="14"/>
+                <Label Content="Ataskaitos pavadinimas" Width="143" Margin="0 10 0 0" />
+                <TextBox TextChanged="TextIsChanged" Name="Name_textbox" Width="200" Height="25" Margin="0 0 0 0" FontSize="14"/>
+                <Label Content="Ataskaitos formatas" Width="122" Margin="0 5 0 0" />
+                <ComboBox Name="Formatas_combo" SelectedIndex="0" Width="200" Height="25" IsEditable="False" Margin="0 0 0 0" FontSize="14"/>
+                <Label Content="Kriterijaus pasirinkimas" Width="142" Margin="0 10 0 0" />
+                <ComboBox Name="Pasirinkimas_combo" SelectedIndex="0" Width="200" Height="25" IsEditable="False" Margin="0 0 0 0" FontSize="14"/>
+                <Label Content="Kriterijus" Width="65" Margin="0 10 0 0" />
+                <ComboBox Name="Criteria_combo" SelectedIndex="0" Width="200" Height="25" IsEditable="False" Margin="0 0 0 0" FontSize="14"/>
             </StackPanel>
             <Button Grid.Column="1" Name="formuoti" Content="Formuoti" Height="35" Margin="10,0,10,50" Click="Formuoti_Click" IsEnabled="False"/>
             <Button Grid.Column="1" Name="cancel" Content="Atšaukti" Height="35" Margin="10,0,10,-50" Click="Cancel_Click"/>

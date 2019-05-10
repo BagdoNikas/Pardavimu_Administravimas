@@ -34,7 +34,6 @@ namespace Administravimas
         public static string id_darbuotojo;
         public static string id_uzsakymo;
         public static string id_prekes;
-        public static int prekiuskaicius = 0;
         #endregion
 
         /// <summary>
@@ -80,7 +79,6 @@ namespace Administravimas
                         pid.Add(id);
                         kiekiai.Add(kiekis);
                         i++;
-                        prekiuskaicius++;
                     }
                     Detalizacija dummy = new Detalizacija(uid, pid.ToArray(), kiekiai.ToArray());
                     Detalės.Add(dummy);
@@ -232,7 +230,7 @@ namespace Administravimas
         /// </summary>
         /// <param name="elementas">elementas kuri irasys i faila</param>
         /// <param name="nr">failo numeris failu masyve</param>
-        public static void Salinimas(Object elementas, int nr)
+        public static void Redagavimas(Object elementas, int nr)
         {            
             using (var fr = new StreamWriter(File.Open(failai[nr], FileMode.Append), Encoding.GetEncoding(1257)))
             {

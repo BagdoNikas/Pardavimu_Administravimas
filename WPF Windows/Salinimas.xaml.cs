@@ -15,16 +15,20 @@ namespace Administravimas.WPF_Windows
             InitializeComponent();
 
             Kategorija_combo.SelectionChanged += SelectionChanged;
-            Kategorija_combo.Items.Add("--pasirinkite--");
+            //ComboBox'o "Kategorija" užpildymas įrašais.
+            Kategorija_combo.Items.Add("----------------");
             Kategorija_combo.Items.Add("Užsakymas");
             Kategorija_combo.Items.Add("Klientas");
             Kategorija_combo.Items.Add("Darbuotojas");
             Kategorija_combo.Items.Add("Prekė");
             Kategorija_combo.Items.Add("Išvalyti duomenis");
+            Pavadinimas_combo.IsHitTestVisible = false;
+            Pavadinimas_combo.IsEditable = false;
+            Kategorija_combo.IsEditable = false;
         }
 
         /// <summary>
-        /// Pasikeitus vartotojo pasirinkimui atnaujinami Pavadinimas_combobox elementai
+        /// Pakeitus ComboBox'o "Kategorija" reikšmę, priklausomai pasikeičia CombBox'o "Pavadinimas" reikšmės.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -34,11 +38,13 @@ namespace Administravimas.WPF_Windows
             {
                 switch (Kategorija_combo.SelectedItem.ToString())
                 {
-                    case "--pasirinkite--":
+                    case "----------------":
                         Pavadinimas_combo.Items.Clear();
+                        Pavadinimas_combo.IsHitTestVisible = false;
                         break;
                     case "Užsakymas":
                         Pavadinimas_combo.Items.Clear();
+                        Pavadinimas_combo.IsHitTestVisible = true;
                         for (int i = 0; i < Metodai.Užsakymai.Count; i++)
                         {
                             Pavadinimas_combo.Items.Add(Metodai.Užsakymai[i].ID);
@@ -46,6 +52,7 @@ namespace Administravimas.WPF_Windows
                         break;
                     case "Klientas":
                         Pavadinimas_combo.Items.Clear();
+                        Pavadinimas_combo.IsHitTestVisible = true;
                         for (int i = 0; i < Metodai.Klientai.Count; i++)
                         {
                             Pavadinimas_combo.Items.Add(Metodai.Klientai[i].Pavadinimas);
@@ -53,6 +60,7 @@ namespace Administravimas.WPF_Windows
                         break;
                     case "Darbuotojas":
                         Pavadinimas_combo.Items.Clear();
+                        Pavadinimas_combo.IsHitTestVisible = true;
                         for (int i = 0; i < Metodai.Pardavėjai.Count; i++)
                         {
                             Pavadinimas_combo.Items.Add(Metodai.Pardavėjai[i].VardasPavardė);
@@ -60,6 +68,7 @@ namespace Administravimas.WPF_Windows
                         break;
                     case "Prekė":
                         Pavadinimas_combo.Items.Clear();
+                        Pavadinimas_combo.IsHitTestVisible = true;
                         for (int i = 0; i < Metodai.Prekės.Count; i++)
                         {
                             Pavadinimas_combo.Items.Add(Metodai.Prekės[i].Pavadinimas);
@@ -67,6 +76,7 @@ namespace Administravimas.WPF_Windows
                         break;
                     case "Išvalyti duomenis":
                         Pavadinimas_combo.Items.Clear();
+                        Pavadinimas_combo.IsHitTestVisible = true;
                         Pavadinimas_combo.Items.Add("Užsakymai");
                         Pavadinimas_combo.Items.Add("Detalizacija");
                         Pavadinimas_combo.Items.Add("Prekės");
@@ -75,6 +85,7 @@ namespace Administravimas.WPF_Windows
                         break;
                     default:
                         Pavadinimas_combo.Items.Clear();
+                        Pavadinimas_combo.IsHitTestVisible = false;
                         break;
                 }
 
@@ -85,7 +96,7 @@ namespace Administravimas.WPF_Windows
         }
 
         /// <summary>
-        /// Ištrina pasirinktus duomenis. Jeigu duomenys naudojami kitoje klasėje vartotojui apie tai praneša ir neleidžia ištrynti.
+        /// Parinktų duomenų šalinimas mygtuko "Šalinti" paspaudimu.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -111,8 +122,8 @@ namespace Administravimas.WPF_Windows
                             }
                             if (i != Metodai.Užsakymai.Count)
                             {
-                                Metodai.Salinimas(Metodai.Užsakymai[i], 0);
-                                Metodai.Salinimas(Metodai.Detalės[i], 1);
+                                Metodai.Redagavimas(Metodai.Užsakymai[i], 0);
+                                Metodai.Redagavimas(Metodai.Detalės[i], 1);
                             }
                         }
                         istrinta = true;
@@ -129,7 +140,7 @@ namespace Administravimas.WPF_Windows
                                 Metodai.Klientai.RemoveAt(i);
 
                             if (i != Metodai.Klientai.Count)
-                                Metodai.Salinimas(Metodai.Klientai[i], 4);
+                                Metodai.Redagavimas(Metodai.Klientai[i], 4);
                         }
                         istrinta = true;
                     }
@@ -148,7 +159,7 @@ namespace Administravimas.WPF_Windows
                             if (Pavadinimas_combo.Text.Equals(Metodai.Pardavėjai[i].VardasPavardė))
                                 Metodai.Pardavėjai.RemoveAt(i);
                             if (i != Metodai.Pardavėjai.Count)
-                                Metodai.Salinimas(Metodai.Pardavėjai[i], 3);
+                                Metodai.Redagavimas(Metodai.Pardavėjai[i], 3);
 
                         }
                         istrinta = true;
@@ -168,7 +179,7 @@ namespace Administravimas.WPF_Windows
                             if (Pavadinimas_combo.Text.Equals(Metodai.Prekės[i].Pavadinimas))
                                 Metodai.Prekės.RemoveAt(i);
                             if (i != Metodai.Prekės.Count)
-                                Metodai.Salinimas(Metodai.Prekės[i], 2);
+                                Metodai.Redagavimas(Metodai.Prekės[i], 2);
                         }
                         istrinta = true;
                     }
@@ -203,13 +214,13 @@ namespace Administravimas.WPF_Windows
                     break;
             }
             if (istrinta)
-                MessageBox.Show("Elementas ištryntas");
+                MessageBox.Show("Elementas ištrintas");
             Kategorija_combo.SelectedIndex = 0;
             Remove.IsEnabled = false;
         }
 
         /// <summary>
-        /// Išjungia ši langa
+        /// Išjungia "Šalinimas" langą mygtuko "Atšaukti" paspaudimu.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -218,13 +229,18 @@ namespace Administravimas.WPF_Windows
             this.Close();
         }
 
+        /// <summary>
+        /// Mygtuko "Pagalba" atliekami veiksmai.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("1. Pasirinkite kategoriją\n" +
-                            "2. Pasirinkite objektą kurį norite pašalinti\n" +
-                            "3. Paspauskite mygtuką 'Šalinti\n\n" +
+            MessageBox.Show("1. Pasirinkite kategoriją.\n" +
+                            "2. Pasirinkite objektą, kurį norite pašalinti.\n" +
+                            "3. Paspauskite mygtuką 'Šalinti'.\n\n" +
                             "Perspėjimas!!! Jeigu objektas susietas su kuriuo\n" +
-                            "nors kitu, jo nebus galima ištrynti.","Pagalba");
+                            "nors kitu, jo nebus galima ištrinti.","Pagalba");
         }
     }
 }

@@ -54,7 +54,6 @@ C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administra
 C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Klienta.g.cs
 C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Darbuotoja.baml
 C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Prideti_Klienta.baml
-C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.csprojAssemblyReference.cache
 C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Formuoti_Ataskaita.g.cs
 C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\Kurti_Uzsakyma.g.cs
 C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\WPF Windows\MainWindow.g.cs
@@ -83,3 +82,6 @@ C:\Users\Marius\Dropbox\Administravimas\Administravimas\bin\Debug\Xceed.Words.NE
 C:\Users\Marius\Dropbox\Administravimas\Administravimas\obj\Debug\Administravimas.csproj.CopyComplete
 C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\bin\Debug\Xceed.Words.NET.dll
 C:\Users\nikod\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.csproj.CopyComplete
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\bin\Debug\Xceed.Words.NET.dll
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.csproj.CopyComplete
+C:\Users\Justinas\Dropbox\KTU\Programavimo inžinerija\Laboratoriniai\Administravimas\Administravimas\obj\Debug\Administravimas.csprojAssemblyReference.cache

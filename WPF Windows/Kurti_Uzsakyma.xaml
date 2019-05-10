@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Administravimas.WPF_Windows"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Naujas Užsakymas" Height="300" Width="1000"
+        Title="Užsakymo kūrimas" Height="220" Width="950"
                 ResizeMode="NoResize" Background="LightGray">
     <Window.Resources>
         <Style TargetType="Button">
@@ -34,54 +34,45 @@
     </Window.Resources>
     <Border Padding="10">
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="30*"/>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="939*"/>
-            </Grid.ColumnDefinitions>
-            <Label Content="Prekės ID ir Kiekis" Width="110" Margin="772,10,57,0" Grid.Column="2" />
-
-            <RichTextBox TextChanged="EnableButton" Name="Id_Kiekis_RichText" Height="100" Width="200" Margin="729,46,10,105" Grid.Column="2">
-                <RichTextBox.Resources>
-                    <Style TargetType="{x:Type Paragraph}">
-                        <Setter Property="Margin" Value="0"/>
-                    </Style>
-                </RichTextBox.Resources>
-            </RichTextBox>
-            <StackPanel Name="elementuStack" Grid.ColumnSpan="3">
-                <Grid Margin="0,0,216,0">
+            <StackPanel Name="elementuStack" Grid.ColumnSpan="4">
+                <Grid Margin="0,0,0,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100"/>
                         <ColumnDefinition Width="250"/>
                         <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="170"/>
                         <ColumnDefinition Width="150"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
-                        <Label Content="ID" Margin="37,10,10,0" />
-                        <TextBox IsReadOnly="True" TextChanged="EnableButton" Name="ID_text" Height="25" Margin="5 10 5 10"/>
+                        <Label Content="ID" Margin="37,10,37,0" />
+                        <TextBox IsReadOnly="True" TextChanged="EnableButton" Name="ID_text" TextAlignment="Center" Height="25" Margin="5 10 5 10"/>
                     </StackPanel>
                     <StackPanel Grid.Column="1">
-                        <Label Content="Klientas" Margin="86,10,58,0" />
+                        <Label Content="Klientas" Margin="97,10,97,0" />
                         <ComboBox SelectionChanged="text_SelectionChanged" IsReadOnly="True" Name="Klientas_text" Height="25"  Margin="5 10 5 10"/>
                     </StackPanel>
                     <StackPanel  Grid.Column="2">
-                        <Label Content="Pardavėjas" Margin="69,10,58,0" />
+                        <Label Content="Pardavėjas" Margin="89,10,89,0" />
                         <ComboBox  SelectionChanged="text_SelectionChanged" IsReadOnly="True" Name="Pardavejas_text" Height="25" Margin="5 10 5 10"/>
                     </StackPanel>
                     <StackPanel Grid.Column="3">
-                        <Label Content="Data" Margin="24,10,10,0"/>
-                        <TextBox TextChanged="EnableButton" Name="Data_text" Height="25" Margin="5 10 5 10" Text="{Binding Source={x:Static sys:DateTime.Now},  StringFormat='yyyy-MM-dd HH:mm ',Mode=OneWay}"/>
+                        <Label Content="Prekės ID ir Kiekis" Width="110" Margin="5,10,5,10" Grid.Column="4" />
+                        <RichTextBox TextChanged="EnableButton" Name="Id_Kiekis_RichText" Height="100" Width="150" Margin="5,0,5,10" Grid.Column="4">
+                            <RichTextBox.Resources>
+                                <Style TargetType="{x:Type Paragraph}">
+                                    <Setter Property="Margin" Value="0"/>
+                                </Style>
+                            </RichTextBox.Resources>
+                        </RichTextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Column="4">
+                        <Label Content="Data" Margin="50,10,50,0"/>
+                        <TextBox TextChanged="EnableButton" Name="Data_text" TextAlignment="Center" Height="25" Margin="5 10 5 10" Text="{Binding Source={x:Static sys:DateTime.Now},  StringFormat='yyyy-MM-dd HH:mm ',Mode=OneWay}"/>
+                        <Button IsEnabled="False" Name="Kurti" Content="Kurti" Width="80" Height="25" Margin="10 5 10 10" Click="Kurti_Click"></Button>
+                        <Button Name="Cancel" Content="Atšaukti" Width="80" Height="25" Margin="10 0 10 10" Click="Cancel_Click"></Button>
                     </StackPanel>
                 </Grid>
-
-                <Grid Margin="0 80 0 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column="1" Name="Cancel" Content="Atšaukti" Width="65" Height="25" Margin="250 10 10 10" Click="Cancel_Click"></Button>
-                    <Button IsEnabled="False" Grid.Column="1" Name="Kurti" Content="Kurti" Width="60" Height="25" Margin="400 10 10 10" Click="Kurti_Click"></Button>
-                </Grid>
+                
             </StackPanel>
             <Menu HorizontalAlignment="Left" Height="15" Margin="-10,-10,0,0" VerticalAlignment="Top" Width="48" Grid.ColumnSpan="3">
                 <MenuItem Header="Pagalba" Width="48" Click="MenuItem_Click"/>

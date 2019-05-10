@@ -8,34 +8,33 @@ namespace Administravimas.WPF_Windows
     /// </summary>
     public partial class Prideti_Klienta : Window
     {
-        string senasidF;
-        string senasidJ;
-        /// <summary>
-        /// PAGRINDINIS METODAS ĮGALINANTIS PAGRINDINIAS LANGO SAVYBES
-        /// NEIŠTRYNTI
-        /// </summary>
+        string oldIDfiz;
+        string oldIdjur;
+
         public Prideti_Klienta()
         {
             InitializeComponent();
 
+            //ComboBox'o "Tipas" užpildymas reikšmėmis.
             Tipas_combo.Items.Add("Fizinis");
             Tipas_combo.Items.Add("Juridinis");
+
             Generate_ID();
 
         }
 
         /// <summary>
-        /// Išjungia tik Pridėti_Klienta langą
+        /// Išjungia "Naujas klientas" langą mygtuko "Baigti" paspaudimu.
         /// </summary>
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            Metodai.id_klientoF = senasidF;
-            Metodai.id_klientoJ = senasidJ;
+            Metodai.id_klientoF = oldIDfiz;
+            Metodai.id_klientoJ = oldIdjur;
             this.Close();
         }
 
         /// <summary>
-        /// Sukuria naują klientą
+        /// Įtraukia naują klientą į sąrašus mygtuko "Pridėti" paspaudimu.
         /// </summary>
         private void Itraukti_Click(object sender, RoutedEventArgs e)
         {
@@ -52,38 +51,38 @@ namespace Administravimas.WPF_Windows
         }
 
         /// <summary>
-        /// Generuoja naują id kodą pagal pasirinktą tipą ir jau egzistuojančius kodus
+        /// Naujo identifikatoriaus generavimas pagal pasirinktą tipą ir jau egzistuojančius ID.
         /// </summary>
         public void Generate_ID()
         {
             string tipas = Tipas_combo.SelectedItem.ToString();
             string id = "";
-            senasidF = Metodai.id_klientoF;
-            senasidJ = Metodai.id_klientoJ;
+            oldIDfiz = Metodai.id_klientoF;
+            oldIdjur = Metodai.id_klientoJ;
             switch (tipas[0])
             {
-                case 'F': id = "F_" + (int.Parse(senasidF.Substring(2)) + 1).ToString("D4"); Metodai.id_klientoF = id; break;
-                case 'J': id = "J_" + (int.Parse(senasidJ.Substring(2)) + 1).ToString("D4"); Metodai.id_klientoJ = id; break;
+                case 'F': id = "F_" + (int.Parse(oldIDfiz.Substring(2)) + 1).ToString("D4"); Metodai.id_klientoF = id; break;
+                case 'J': id = "J_" + (int.Parse(oldIdjur.Substring(2)) + 1).ToString("D4"); Metodai.id_klientoJ = id; break;
             }
             Id_text.Text = id;
 
         }
 
         /// <summary>
-        /// Generuoja naują id kodą pasikeitus kliento tipui
+        /// Naujo identifikatoriaus generavimas pakeitus kliento tipą.
         /// </summary>
         private void Tipas_combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (IsLoaded)
             {
-                Metodai.id_klientoF = senasidF;
-                Metodai.id_klientoJ = senasidJ;
+                Metodai.id_klientoF = oldIDfiz;
+                Metodai.id_klientoJ = oldIdjur;
                 Generate_ID();
             }
         }
 
         /// <summary>
-        /// Jeigu visi textbox yra upildyti tai itraukti mygtukas įjungiamas, jei neužpildyti tai išjungtas
+        /// Mygtuko "Pridėti" įgalinimas priklausomai nuo formos užpildymo.
         /// </summary>
         private void EnableButton(object sender, TextChangedEventArgs e)
         {
@@ -93,12 +92,18 @@ namespace Administravimas.WPF_Windows
                 Itraukti.IsEnabled = false;
         }
 
+        /// <summary>
+        /// Mygtuko "Pagalba" atliekami veiksmai.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("1. Įveskite kliento pavadinimą (Gali būti vardas ir pavardė)\n" +
-                            "2. Įveskite kliento kodą (sveikas skaičius)\n" +
-                            "3. Įveskite kliento telefono numerį (sveikas skaičius)\n" +
-                            "4. Paspauskite mygtuką 'Įtraukti'", "Pagalba");
+            MessageBox.Show("1. Įveskite įmonės pavadinimą arba asmens vardą ir pavardę.\n" +
+                            "2. Įveskite įmonės ar asmens kodą (sveikas skaičius).\n" +
+                            "3. Įveskite kliento telefono numerį (sveikas skaičius).\n" +
+                            "   Formatas: \"3706xxxxxxx\"." +
+                            "4. Paspauskite mygtuką 'Įtraukti'.", "Pagalba");
         }
     }
 }

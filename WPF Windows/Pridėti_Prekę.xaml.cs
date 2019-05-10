@@ -13,7 +13,7 @@ namespace Administravimas.WPF_Windows
     /// </summary>
     public partial class Prideti_preke : Window
     {
-        string senasid;
+        string oldID;
         public Prideti_preke()
         {
             InitializeComponent();
@@ -21,18 +21,18 @@ namespace Administravimas.WPF_Windows
         }
 
         /// <summary>
-        /// Sukuria Naują ID numerį
+        /// Naujo identifikatoriaus generavimas pagal jau egzistuojančius ID.
         /// </summary>
         private void GenerateID()
         {
-            senasid = Metodai.id_prekes;
-            string id = "P" + (int.Parse(senasid.Substring(2)) + 1).ToString("D4");
+            oldID = Metodai.id_prekes;
+            string id = "P" + (int.Parse(oldID.Substring(2)) + 1).ToString("D4");
             Metodai.id_prekes = id;
             pid.Text = id;
         }
 
         /// <summary>
-        /// Įjungia mygtuką pridęti kai visi laukai užpyldomi
+        /// mygtuko "Pridėti" įgalinimas priklausomai nuo formos užpildymo.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -48,7 +48,8 @@ namespace Administravimas.WPF_Windows
         }
 
         /// <summary>
-        /// Sukuria naują elementą ir pridedą į listą
+        /// Mygtuko "Pridėti" atliekami veiksmai.
+        /// Naujos prekės įtraukimas į sarašą.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -66,20 +67,26 @@ namespace Administravimas.WPF_Windows
         }
 
         /// <summary>
-        /// Uždaro tik šį langą
+        /// Išjungia langą "Nauja prekė" mygtuko "Baigti" paspaudimu.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
+            Metodai.id_prekes = oldID;
             this.Close();
         }
 
+        /// <summary>
+        /// Mygtuko "Pagalba" atliekami veiksmai.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("1. Įveskite prekės pavadimą\n" +
-                            "2. Įveskite prekės kainą\n" +
-                            "3. Paspauskite mygtuką 'Įtraukti'", "Pagalba");
+            MessageBox.Show("1. Įveskite prekės pavadinimą.\n" +
+                            "2. Įveskite prekės kainą.\n" +
+                            "3. Paspauskite mygtuką 'Įtraukti'.", "Pagalba");
         }
     }
 }
